@@ -2,12 +2,14 @@
 import tkinter
 import customtkinter as CTK
 from PIL import Image
+import os
 
 ## Parent app setting - global
 app_version = '1.0'
 CTK.set_appearance_mode("Dark")  # Modes: "System" (standard), "Dark", "Light"
 CTK.set_default_color_theme("dark-blue")  # Themes: "blue" (standard), "green", "dark-blue"
 
+print (os.getcwd())
 class App(CTK.CTk):
     
     # Class variable
@@ -71,7 +73,7 @@ class App(CTK.CTk):
         self.Nth_block_info = CTK.CTkLabel(self, fg_color="pink",text= ":Block \n :Gas \n :Hash \n :Info")
         self.Nth_block_info.place(x=130, y=220)
 
-        self.chain_image = CTK.CTkImage(light_image=Image.open("C:\GitHUB-Pranav\Personal\ETH_Explorer\Images\chain_image.png"), size=(672,107))
+        self.chain_image = CTK.CTkImage(light_image=Image.open("..\Images\chain_image.png"), size=(672,107))
         self.chain_image_label = CTK.CTkLabel(self, text = '', image= None)
         self.chain_image_label.place(x=200, y=250)
 
