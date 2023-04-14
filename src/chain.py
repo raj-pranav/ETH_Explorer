@@ -4,7 +4,6 @@ from web3 import Web3
 from decouple import  config
 
 API_KEY = config("ALCH_GOERLI_API_KEY")
-print (API_KEY)
 
 alchemy_url = f"https://eth-goerli.g.alchemy.com/v2/{API_KEY}"
 w3 = Web3(Web3.HTTPProvider(alchemy_url))
